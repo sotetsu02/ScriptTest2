@@ -21,7 +21,7 @@ public class Test : MonoBehaviour
         {
             UnityEngine.Debug.Log(array[i]);
         }
-        for (int i = 4; i >= 0; i--)
+        for (int i = array.Length - 1; i >= 0; i--)
         {
             UnityEngine.Debug.Log(array[i]);
         }

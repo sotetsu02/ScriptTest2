@@ -9,10 +9,10 @@ public class Boss
     //魔法攻撃関数
     public void Magic(int cost)
     {
-        if (this.mp >= 5)
+        if (this.mp >= cost)
         {
-            cost = this.mp - 5;
-            UnityEngine.Debug.Log("魔法攻撃をした。残りＭＰは" + cost + "。");
+            this.mp -= cost;
+            UnityEngine.Debug.Log("魔法攻撃をした。残りＭＰは" + this.mp + "。");
         }
         else
         {
@@ -28,7 +28,10 @@ public class Test2 : MonoBehaviour
     {
         Boss lastboss = new Boss();
 
-        lastboss.Magic(0);
+        for (int i = 0; i < 11; i++)
+        {
+            lastboss.Magic(5);
+        }
     }
 
     // Update is called once per frame
